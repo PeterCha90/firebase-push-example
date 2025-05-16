@@ -2,6 +2,8 @@
 .continue
 .DS_Store
 firebase-key.json
+firebase-messaging-sw.js
+firebase.ts
 
 # Logs
 logs
