@@ -32,6 +32,8 @@ if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 
 # 임시 저장소 (DB 대신)
+# TODO: 추후 데이터베이스 연동 시 설치한 app마다 
+# 해당 유저 id와 함께 토큰을 저장하는 방식으로 변경
 tokens: List[str] = []
 
 # 기본 경로("/")에 대한 리다이렉션 처리

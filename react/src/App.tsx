@@ -34,8 +34,12 @@ function App() {
 
     // 서비스워커에서 온 메시지 수신
     navigator.serviceWorker.addEventListener('message', (event) => {
-      const { title, body } = event.data.notification ?? {};
-      setMsg({ title: title ?? '', body: body ?? '' });
+      if (event.data && event.data.messageType === 'push-received') {
+        const payload = event.data.notification;
+        const title = payload.title ||  '';
+        const body = payload.body || '';
+        setMsg({ title, body });
+      }
     });
 
     return () => unsubscribe();
