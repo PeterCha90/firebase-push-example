@@ -1,2 +1,4 @@
-# firebase_example
-🔥 Firebase Example - React(Typescript + Vite) &amp; FastAPI(Langserve)
+### 🔥 Firebase Example 
+- Front: React(Typescript + Vite)
+- Back: FastAPI(Langserve)
+
