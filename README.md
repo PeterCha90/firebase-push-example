@@ -1,6 +1,9 @@
 ### 🔥 Firebase Push Notification Example 
 - Front: React(Typescript + Vite)
-- Back: FastAPI(Langserve)
+- Back: FastAPI
+
+### Process
+<img src="process.png" />
 
 
 ### Install 
@@ -19,12 +22,12 @@
 
 #### Test it
 - Test it using command below or FastAPI Swagger.
-```bash
-curl -X POST http://localhost:8000/push \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "안녕하세요!",
-    "body": "React 앱으로부터 푸시가 왔어요. 성공! 🎉",
-    "token": "YOUR_TOKEN"
-}'
-```
+  ```bash
+  curl -X POST http://localhost:8000/push \
+    -H "Content-Type: application/json" \
+    -d '{
+      "title": "안녕하세요!",
+      "body": "React 앱으로부터 푸시가 왔어요. 성공! 🎉",
+      "token": "YOUR_TOKEN"
+  }'
+  ```
