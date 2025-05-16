@@ -1,4 +1,4 @@
-### 🔥 Firebase Example 
+### 🔥 Firebase Push Notification Example 
 - Front: React(Typescript + Vite)
 - Back: FastAPI(Langserve)
 
@@ -7,18 +7,18 @@
 * run `git clone` this repository.
 
 #### Front
-- move to `firebase_example/react`
+- move to `react/`
 - run `npm install`
 - run `npm run dev`
 
 #### Back
-- move to `firebase_example/fastapi`
+- move to `fastapi/`
 - install `poetry`
-- move to `app`
+- move to `app/`
 - run `python server.py`
 
 #### Test it
-- Test it using command below or FastAPI Swagger
+- Test it using command below or FastAPI Swagger.
 ```bash
 curl -X POST http://localhost:8000/push \
   -H "Content-Type: application/json" \
