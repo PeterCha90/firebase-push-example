@@ -8,10 +8,7 @@ from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from firebase_admin import credentials, messaging
-
-from chains import ChatChain
-from langserve import add_routes
-from interfaces import InputChat, PushRequest, TokenRequest, MessageRequest
+from interfaces import TokenRequest, MessageRequest
 
 load_dotenv()
 
@@ -68,18 +65,6 @@ def send_message(req: MessageRequest):
         return {"success": True, "message_id": response}
     except Exception as e:
         return {"success": False, "error": str(e)}
-
-
-# 대화형 채팅 엔드포인트 설정
-# Swagger 사용을 위한 주석처리.
-# add_routes(
-#     app,
-#     ChatChain().create().with_types(input_type=InputChat),
-#     path="/chat",
-#     enable_feedback_endpoint=False,
-#     enable_public_trace_link_endpoint=False,
-#     playground_type="chat",
-# )
 
 
 if __name__ == "__main__":

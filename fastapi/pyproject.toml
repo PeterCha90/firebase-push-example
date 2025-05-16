@@ -11,16 +11,11 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.11"
 uvicorn = "^0.23.2"
-langserve = {extras = ["server"], version = ">=0.0.30"}
 pydantic = "^2.7.4"
 dotenv = "^0.9.9"
-langchain-ollama = "^0.3.2"
 google-auth = "^2.40.1"
 firebase-admin = "^6.8.0"
 
-
-[tool.poetry.group.dev.dependencies]
-langchain-cli = ">=0.0.15"
 
 [build-system]
 requires = ["poetry-core"]
